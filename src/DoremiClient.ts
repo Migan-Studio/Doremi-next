@@ -19,7 +19,7 @@ export default class DoremiClient extends DiscommandClient {
       {
         directory: {
           command: join(__dirname, 'Commands'),
-          listener: join(__dirname, 'Listeners'),
+          // listener: join(__dirname, 'Listeners'),
         },
       },
     )

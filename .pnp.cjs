@@ -3195,10 +3195,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["rollup", [\
-      ["npm:3.29.1", {\
-        "packageLocation": "./.yarn/cache/rollup-npm-3.29.1-c6f1191ba8-34e19e5aa4.zip/node_modules/rollup/",\
+      ["npm:3.29.2", {\
+        "packageLocation": "./.yarn/cache/rollup-npm-3.29.2-1c58c7ff1a-22fc3f4ab4.zip/node_modules/rollup/",\
         "packageDependencies": [\
-          ["rollup", "npm:3.29.1"],\
+          ["rollup", "npm:3.29.2"],\
           ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"]\
         ],\
         "linkType": "HARD"\
@@ -3649,7 +3649,7 @@ const RAW_RUNTIME_STATE =
           ["postcss", null],\
           ["postcss-load-config", "virtual:bdcd63108bf88a3709dcfec903f38cc00ed26735fa593f2333781a38a9d9fc5c5f88c171b4f803d318d915581989ff1c00dd7f17c4cd353d52374816d24d3029#npm:4.0.1"],\
           ["resolve-from", "npm:5.0.0"],\
-          ["rollup", "npm:3.29.1"],\
+          ["rollup", "npm:3.29.2"],\
           ["source-map", "npm:0.8.0-beta.0"],\
           ["sucrase", "npm:3.34.0"],\
           ["tree-kill", "npm:1.2.2"],\
