@@ -2,6 +2,7 @@ import { DiscommandClient } from 'discommand'
 import { GatewayIntentBits } from 'discord.js'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { ComponentPlugin } from '@discommand/message-components'
 import 'dotenv/config'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -18,9 +19,14 @@ export default class DoremiClient extends DiscommandClient {
       },
       {
         directory: {
-          command: join(__dirname, 'Commands'),
-          listener: join(__dirname, 'Listeners'),
+          command: join(__dirname, 'commands'),
+          listener: join(__dirname, 'listeners'),
         },
+        plugins: [
+          new ComponentPlugin({
+            directory: join(__dirname, 'components'),
+          }),
+        ],
       },
     )
   }
