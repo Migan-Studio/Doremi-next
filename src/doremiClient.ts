@@ -20,6 +20,7 @@ export default class DoremiClient extends DiscommandClient {
   public readonly logger = new Logger({
     name: 'Doremi',
   })
+  public readonly COLOR = 0xef8723
   public readonly config = config
   public constructor() {
     super(
@@ -65,6 +66,7 @@ declare module 'discord.js' {
   interface Client {
     get version(): string
     readonly logger: Logger
+    readonly COLOR: number
     readonly config: DoremiConfig
   }
 }
