@@ -10,4 +10,5 @@ export function localzation(locale: Locale) {
   }
 }
 
+export * from './information.js'
 export { english, korean }

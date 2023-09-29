@@ -2,7 +2,7 @@ import { DiscommandClient } from 'discommand'
 import { GatewayIntentBits, Partials } from 'discord.js'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { ComponentPlugin } from '@discommand/message-components'
+// import { ComponentPlugin } from '@discommand/message-components'
 import { Logger } from '@migan-studio/logger'
 import { prerelease } from 'semver'
 import { version } from '../package.json'
@@ -37,11 +37,11 @@ export default class DoremiClient extends DiscommandClient {
           command: join(__dirname, 'commands'),
           listener: join(__dirname, 'listeners'),
         },
-        plugins: [
-          new ComponentPlugin({
-            directory: join(__dirname, 'components'),
-          }),
-        ],
+        // plugins: [
+        // new ComponentPlugin({
+        //   directory: join(__dirname, 'components'),
+        // }),
+        // ],
       },
     )
   }

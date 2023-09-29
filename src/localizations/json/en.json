@@ -9,6 +9,10 @@
     "embeds": {
       "title": "{name}'s information",
       "none_nickname": "None"
+    },
+    "components": {
+      "label": "{name}'s information",
+      "description": "Information for {name}"
     }
   },
   "is_dm": "❌ Can't Using the DM :("
