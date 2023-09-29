@@ -5,7 +5,11 @@
   },
   "information": {
     "name": "정보",
-    "description": "Doremi의 정보"
+    "description": "Doremi의 정보",
+    "embeds": {
+      "title": "{name}의 정보",
+      "none_nickname": "없음"
+    }
   },
   "is_dm": "❌ 개인 메세지에선 해당 명령어를 사용 할 수 없어요 :("
 }

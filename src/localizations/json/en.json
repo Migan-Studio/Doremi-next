@@ -5,7 +5,11 @@
   },
   "information": {
     "name": "information",
-    "description": "Doremi's information"
+    "description": "Doremi's information",
+    "embeds": {
+      "title": "{name}'s information",
+      "none_nickname": "None"
+    }
   },
   "is_dm": "❌ Can't Using the DM :("
 }
