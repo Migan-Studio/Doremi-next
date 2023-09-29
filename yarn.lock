@@ -12,10 +12,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discommand/message-components@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@discommand/message-components@npm:2.0.0"
-  checksum: 5adaa5180b94084b6d29952c36df42933048797412af4544a16d5069f8929fa7b5441b5abfef3f8f601c3baf2531bac0a76dd398fedb844fdb289860d89c2b68
+"@discommand/message-components@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@discommand/message-components@npm:2.1.0"
+  checksum: 9aa464d2d6bd522c26caf6fa3dedfbce0475725604716c4a30de69158ff039e7f9e624614a4ea7fcdb25da2a2d58b1ae0a0a7db85e05650dc79f4f1f4a8354ca
   languageName: node
   linkType: hard
 
@@ -1126,7 +1126,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "doremi@workspace:."
   dependencies:
-    "@discommand/message-components": "npm:^2.0.0"
+    "@discommand/message-components": "npm:^2.1.0"
     "@migan-studio/logger": "npm:^1.0.1"
     "@migan/koreanbots": "npm:^1.1.1"
     "@migan/prettier-config": "npm:^1.0.0"

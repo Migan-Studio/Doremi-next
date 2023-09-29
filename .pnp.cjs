@@ -26,7 +26,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@discommand/message-components", "npm:2.0.0"],\
+          ["@discommand/message-components", "npm:2.1.0"],\
           ["@migan-studio/logger", "npm:1.0.1"],\
           ["@migan/koreanbots", "npm:1.1.1"],\
           ["@migan/prettier-config", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:1.0.0"],\
@@ -58,10 +58,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@discommand/message-components", [\
-      ["npm:2.0.0", {\
-        "packageLocation": "./.yarn/cache/@discommand-message-components-npm-2.0.0-560e3710aa-5adaa5180b.zip/node_modules/@discommand/message-components/",\
+      ["npm:2.1.0", {\
+        "packageLocation": "./.yarn/cache/@discommand-message-components-npm-2.1.0-a48344ebf0-9aa464d2d6.zip/node_modules/@discommand/message-components/",\
         "packageDependencies": [\
-          ["@discommand/message-components", "npm:2.0.0"]\
+          ["@discommand/message-components", "npm:2.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1492,7 +1492,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["doremi", "workspace:."],\
-          ["@discommand/message-components", "npm:2.0.0"],\
+          ["@discommand/message-components", "npm:2.1.0"],\
           ["@migan-studio/logger", "npm:1.0.1"],\
           ["@migan/koreanbots", "npm:1.1.1"],\
           ["@migan/prettier-config", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:1.0.0"],\
