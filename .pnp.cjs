@@ -35,7 +35,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/eslint-plugin", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:6.7.0"],\
           ["@typescript-eslint/parser", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:6.7.0"],\
           ["chalk", "npm:5.3.0"],\
-          ["discommand", "npm:13.1.1"],\
+          ["discommand", "npm:13.1.2"],\
           ["discord.js", "npm:14.13.0"],\
           ["eslint", "npm:8.49.0"],\
           ["eslint-config-prettier", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:9.0.0"],\
@@ -1437,10 +1437,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["discommand", [\
-      ["npm:13.1.1", {\
-        "packageLocation": "./.yarn/cache/discommand-npm-13.1.1-7088439b95-2761b4f3aa.zip/node_modules/discommand/",\
+      ["npm:13.1.2", {\
+        "packageLocation": "./.yarn/cache/discommand-npm-13.1.2-b827788448-848d683e4c.zip/node_modules/discommand/",\
         "packageDependencies": [\
-          ["discommand", "npm:13.1.1"]\
+          ["discommand", "npm:13.1.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1501,7 +1501,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/eslint-plugin", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:6.7.0"],\
           ["@typescript-eslint/parser", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:6.7.0"],\
           ["chalk", "npm:5.3.0"],\
-          ["discommand", "npm:13.1.1"],\
+          ["discommand", "npm:13.1.2"],\
           ["discord.js", "npm:14.13.0"],\
           ["eslint", "npm:8.49.0"],\
           ["eslint-config-prettier", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:9.0.0"],\
