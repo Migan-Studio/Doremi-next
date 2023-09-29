@@ -4,8 +4,8 @@ export default defineConfig({
   clean: true,
   entry: [
     'src/index.ts',
-    'src/Commands/**/*.ts',
-    // 'src/Events/*.ts',
+    'src/commands/**/*.ts',
+    'src/listeners/*.ts',
     // 'src/Interactions/Components/**/*.ts',
   ],
   skipNodeModulesBundle: true,
