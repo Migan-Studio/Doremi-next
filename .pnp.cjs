@@ -35,7 +35,6 @@ const RAW_RUNTIME_STATE =
           ["chalk", "npm:5.3.0"],\
           ["discommand", "npm:13.0.0"],\
           ["discord.js", "npm:14.13.0"],\
-          ["dotenv", "npm:16.3.1"],\
           ["eslint", "npm:8.49.0"],\
           ["eslint-config-prettier", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:9.0.0"],\
           ["eslint-plugin-prettier", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:5.0.0"],\
@@ -1480,7 +1479,6 @@ const RAW_RUNTIME_STATE =
           ["chalk", "npm:5.3.0"],\
           ["discommand", "npm:13.0.0"],\
           ["discord.js", "npm:14.13.0"],\
-          ["dotenv", "npm:16.3.1"],\
           ["eslint", "npm:8.49.0"],\
           ["eslint-config-prettier", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:9.0.0"],\
           ["eslint-plugin-prettier", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:5.0.0"],\
@@ -1490,15 +1488,6 @@ const RAW_RUNTIME_STATE =
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
         "linkType": "SOFT"\
-      }]\
-    ]],\
-    ["dotenv", [\
-      ["npm:16.3.1", {\
-        "packageLocation": "./.yarn/cache/dotenv-npm-16.3.1-e6d380a398-dbb778237e.zip/node_modules/dotenv/",\
-        "packageDependencies": [\
-          ["dotenv", "npm:16.3.1"]\
-        ],\
-        "linkType": "HARD"\
       }]\
     ]],\
     ["eastasianwidth", [\

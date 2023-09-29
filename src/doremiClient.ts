@@ -3,7 +3,6 @@ import { GatewayIntentBits } from 'discord.js'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { ComponentPlugin } from '@discommand/message-components'
-import 'dotenv/config'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 

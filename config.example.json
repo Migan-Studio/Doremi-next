@@ -1,0 +1,13 @@
+{
+  "bot": {
+    "token": "",
+    "koreanbots_token": ""
+  },
+  "mysql": {
+    "name": "",
+    "host": "",
+    "password": "",
+    "database": "",
+    "port": 3306
+  }
+}
