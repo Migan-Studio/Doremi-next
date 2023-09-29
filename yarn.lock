@@ -1059,10 +1059,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discommand@npm:^13.0.0":
-  version: 13.0.0
-  resolution: "discommand@npm:13.0.0"
-  checksum: 935498d4c18229c2ca57aa6336f24231ffb0b342e727354c197c4a12b80a180ba2efdc385b48f5e700fae1c78c247836c40ae72ef3a2d875b6501314c44da6d9
+"discommand@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "discommand@npm:13.1.0"
+  checksum: 311a440d4374ab6baef37a4a9a344dbd57100bf30d0077933378668610f5632d8da674898fd8a4c667ef4d22ade94d7759998336582282017fb35017bd52640f
   languageName: node
   linkType: hard
 
@@ -1115,7 +1115,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^6.7.0"
     "@typescript-eslint/parser": "npm:^6.7.0"
     chalk: "npm:^5.3.0"
-    discommand: "npm:^13.0.0"
+    discommand: "npm:^13.1.0"
     discord.js: "npm:^14.13.0"
     eslint: "npm:^8.49.0"
     eslint-config-prettier: "npm:^9.0.0"
