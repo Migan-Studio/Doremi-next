@@ -57,7 +57,7 @@ export default class Information extends Command {
           components: [
             {
               type: ComponentType.StringSelect,
-              customId: 'Doremi-select$info',
+              customId: 'Doremi-select$information',
               options: [
                 {
                   label: locale.information.components.label.replace(
@@ -69,7 +69,7 @@ export default class Information extends Command {
                       '{name}',
                       interaction.client.user.username,
                     ),
-                  value: 'Doremi-info$home',
+                  value: 'Doremi-information$home',
                 },
                 {
                   label: locale.information.components.label.replace(
@@ -81,7 +81,7 @@ export default class Information extends Command {
                       '{name}',
                       interaction.client.user.username,
                     ),
-                  value: 'Doremi-info$guild',
+                  value: 'Doremi-information$guild',
                 },
                 {
                   label: locale.information.components.label.replace(
@@ -93,7 +93,7 @@ export default class Information extends Command {
                       '{name}',
                       interaction.client.user.username,
                     ),
-                  value: 'Doremi-info$user',
+                  value: 'Doremi-information$user',
                 },
               ],
             },
