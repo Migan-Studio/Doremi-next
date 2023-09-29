@@ -1,7 +1,8 @@
 {
   "bot": {
     "token": "",
-    "koreanbots_token": ""
+    "koreanbots_token": "",
+    "owner_id": ""
   },
   "mysql": {
     "name": "",

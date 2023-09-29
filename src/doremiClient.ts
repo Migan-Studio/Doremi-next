@@ -1,9 +1,10 @@
 import { DiscommandClient } from 'discommand'
-import { GatewayIntentBits } from 'discord.js'
+import { GatewayIntentBits, Partials } from 'discord.js'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { ComponentPlugin } from '@discommand/message-components'
 import { Logger } from '@migan-studio/logger'
+import config from '../config.json'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -11,6 +12,7 @@ export default class DoremiClient extends DiscommandClient {
   public readonly logger = new Logger({
     name: 'Doremi',
   })
+  public readonly config = config
   public constructor() {
     super(
       {
@@ -19,6 +21,7 @@ export default class DoremiClient extends DiscommandClient {
           GatewayIntentBits.GuildMembers,
           GatewayIntentBits.GuildPresences,
         ],
+        partials: [Partials.Channel],
       },
       {
         directory: {
@@ -35,8 +38,24 @@ export default class DoremiClient extends DiscommandClient {
   }
 }
 
+interface DoremiConfig {
+  bot: {
+    token: string
+    koreanbots_token: string
+    owner_id: string
+  }
+  mysql: {
+    name: string
+    host: string
+    password: string
+    database: string
+    port: number
+  }
+}
+
 declare module 'discord.js' {
   interface Client {
     readonly logger: Logger
+    readonly config: DoremiConfig
   }
 }
