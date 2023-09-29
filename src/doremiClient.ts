@@ -50,7 +50,7 @@ export default class DoremiClient extends DiscommandClient {
 interface DoremiConfig {
   bot: {
     token: string
-    koreanbots_token: string
+    koreanbots_token?: string
     owner_id: string
   }
   mysql: {
@@ -58,7 +58,7 @@ interface DoremiConfig {
     host: string
     password: string
     database: string
-    port: number
+    port?: number
   }
 }
 
