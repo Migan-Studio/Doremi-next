@@ -2,5 +2,10 @@
   "help": {
     "name": "help",
     "description": "Doremi's help"
-  }
+  },
+  "information": {
+    "name": "information",
+    "description": "Doremi's information"
+  },
+  "is_dm": "❌ Can't Using the DM :("
 }

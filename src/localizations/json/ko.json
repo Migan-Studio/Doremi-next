@@ -2,5 +2,10 @@
   "help": {
     "name": "도움말",
     "description": "Doremi의 도움말"
-  }
+  },
+  "information": {
+    "name": "정보",
+    "description": "Doremi의 정보"
+  },
+  "is_dm": "❌ 개인 메세지에선 해당 명령어를 사용 할 수 없어요 :("
 }
