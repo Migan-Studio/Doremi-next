@@ -8,7 +8,7 @@ export default class ClientReady extends Listener {
     super(Events.ClientReady)
   }
 
-  execute(client: Client<true>) {
+  public execute(client: Client<true>) {
     function changeStatus() {
       client.user.setActivity({
         name: '/help | /도움말',
