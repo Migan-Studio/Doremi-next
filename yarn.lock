@@ -368,6 +368,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@migan-studio/logger@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@migan-studio/logger@npm:1.0.1"
+  dependencies:
+    chalk: "npm:^4.1.2"
+  checksum: 088beac75bc44c3c161072e66c996bc729f36ff48c101aaeeebb2217f14c2c8ae0dee2f2bff75fda7d6aac0d9f13fb1c9dfc171eb9ac6459cd4db9d3e69db917
+  languageName: node
+  linkType: hard
+
+"@migan/koreanbots@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@migan/koreanbots@npm:1.1.1"
+  dependencies:
+    undici: "npm:^5.14.0"
+  checksum: de69ae355db281c24bec68c8f0c089a2bc61ba3d28147928e90c97186b0729ac6c8904043e118c12087c7f1b10e31258ad3f3059783d5135fc990bed8ff89259
+  languageName: node
+  linkType: hard
+
 "@migan/prettier-config@npm:^1.0.0":
   version: 1.0.0
   resolution: "@migan/prettier-config@npm:1.0.0"
@@ -888,7 +906,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0":
+"chalk@npm:^4.0.0, chalk@npm:^4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -1109,6 +1127,8 @@ __metadata:
   resolution: "doremi@workspace:."
   dependencies:
     "@discommand/message-components": "npm:^2.0.0"
+    "@migan-studio/logger": "npm:^1.0.1"
+    "@migan/koreanbots": "npm:^1.1.1"
     "@migan/prettier-config": "npm:^1.0.0"
     "@types/node": "npm:^20.6.0"
     "@types/semver": "npm:^7.5.1"
@@ -3114,6 +3134,15 @@ __metadata:
   dependencies:
     busboy: "npm:^1.6.0"
   checksum: 4e4ae061372508bad6c017e0188cdbf1bb73e427d881aefe6277f88cb0bdd45b57bb88d7ab6fc136ff08e7d022bd83ca550a28272aebfb36b28c06fe8f07ac5e
+  languageName: node
+  linkType: hard
+
+"undici@npm:^5.14.0":
+  version: 5.25.2
+  resolution: "undici@npm:5.25.2"
+  dependencies:
+    busboy: "npm:^1.6.0"
+  checksum: 13112f69a4b0dd8d8cd1372fc051d8af682763edaf858f526237073e00676544de78e532ae0f3277ce1f330575792770a0c6e291bb719ec261a2b8212e97ac72
   languageName: node
   linkType: hard
 

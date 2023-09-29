@@ -27,6 +27,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@discommand/message-components", "npm:2.0.0"],\
+          ["@migan-studio/logger", "npm:1.0.1"],\
+          ["@migan/koreanbots", "npm:1.1.1"],\
           ["@migan/prettier-config", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:1.0.0"],\
           ["@types/node", "npm:20.6.0"],\
           ["@types/semver", "npm:7.5.1"],\
@@ -501,6 +503,26 @@ const RAW_RUNTIME_STATE =
           ["@jridgewell/trace-mapping", "npm:0.3.19"],\
           ["@jridgewell/resolve-uri", "npm:3.1.1"],\
           ["@jridgewell/sourcemap-codec", "npm:1.4.15"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@migan-studio/logger", [\
+      ["npm:1.0.1", {\
+        "packageLocation": "./.yarn/cache/@migan-studio-logger-npm-1.0.1-270bcd58d7-088beac75b.zip/node_modules/@migan-studio/logger/",\
+        "packageDependencies": [\
+          ["@migan-studio/logger", "npm:1.0.1"],\
+          ["chalk", "npm:4.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@migan/koreanbots", [\
+      ["npm:1.1.1", {\
+        "packageLocation": "./.yarn/cache/@migan-koreanbots-npm-1.1.1-f2ca55e89c-de69ae355d.zip/node_modules/@migan/koreanbots/",\
+        "packageDependencies": [\
+          ["@migan/koreanbots", "npm:1.1.1"],\
+          ["undici", "npm:5.25.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1471,6 +1493,8 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["doremi", "workspace:."],\
           ["@discommand/message-components", "npm:2.0.0"],\
+          ["@migan-studio/logger", "npm:1.0.1"],\
+          ["@migan/koreanbots", "npm:1.1.1"],\
           ["@migan/prettier-config", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:1.0.0"],\
           ["@types/node", "npm:20.6.0"],\
           ["@types/semver", "npm:7.5.1"],\
@@ -3688,6 +3712,14 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/undici-npm-5.22.1-ff9b0b961e-4e4ae06137.zip/node_modules/undici/",\
         "packageDependencies": [\
           ["undici", "npm:5.22.1"],\
+          ["busboy", "npm:1.6.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:5.25.2", {\
+        "packageLocation": "./.yarn/cache/undici-npm-5.25.2-dc052f4e4b-13112f69a4.zip/node_modules/undici/",\
+        "packageDependencies": [\
+          ["undici", "npm:5.25.2"],\
           ["busboy", "npm:1.6.0"]\
         ],\
         "linkType": "HARD"\

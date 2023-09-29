@@ -7,6 +7,8 @@
   "license": "AGPL-3.0",
   "dependencies": {
     "@discommand/message-components": "^2.0.0",
+    "@migan-studio/logger": "^1.0.1",
+    "@migan/koreanbots": "^1.1.1",
     "chalk": "^5.3.0",
     "discommand": "^13.1.0",
     "discord.js": "^14.13.0",
