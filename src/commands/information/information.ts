@@ -1,7 +1,7 @@
 import { english, korean, localzation, getInformation } from '@localization'
 import { Command } from 'discommand'
-import { ChatInputCommandInteraction, ComponentType } from 'discord.js'
-import { platform, arch } from 'os'
+import { type ChatInputCommandInteraction, ComponentType } from 'discord.js'
+import { platform, arch } from 'node:os'
 
 export default class Information extends Command {
   public constructor() {
