@@ -113,11 +113,22 @@ export function informationSelect(
                 sticky: interaction.guild.stickers.cache.size,
               },
               security: getGuildSecurity(),
+              create: {
+                date: time(
+                  interaction.locale,
+                  new Date(interaction.guild.createdTimestamp),
+                ),
+                ago: timeago(
+                  interaction.guild.createdTimestamp,
+                  interaction.locale,
+                ),
+              },
             }),
             timestamp: new Date().toISOString(),
             thumbnail: {
               url: interaction.guild.iconURL()!,
             },
+            color: interaction.client.COLOR,
           },
         ],
       })

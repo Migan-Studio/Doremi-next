@@ -40,9 +40,9 @@ export function timeago(date: TDate, locale?: Locale) {
 
 export function time(locale: Locale, time: Date) {
   if (locale === Locale.Korean) {
-    return time.toLocaleString('ko-KR')
+    return time.toLocaleDateString('ko-KR')
   } else {
-    return time.toLocaleString('en-US')
+    return time.toLocaleDateString('en-US')
   }
 }
 

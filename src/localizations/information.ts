@@ -1,4 +1,4 @@
-import { Locale, PresenceStatus, Snowflake, codeBlock } from 'discord.js'
+import { Locale, PresenceStatus, type Snowflake, codeBlock } from 'discord.js'
 
 interface InformationBotOptions {
   os: {
@@ -44,6 +44,10 @@ interface InformationGuildOptions {
     sticky: number
   }
   security: InformationGuildSecurity
+  create: {
+    date: string
+    ago: string
+  }
 }
 
 interface InformationUserOptions {
@@ -128,7 +132,10 @@ export function getInformation(locale: Locale) {
 - ${options.count.emoji}개
 
 # 스티커 수
-- ${options.count.sticky}개`,
+- ${options.count.sticky}개
+
+# 길드 생성일
+- ${options.create.date} (${options.create.ago})`,
         )
       },
       user(options: InformationUserOptions) {
@@ -194,7 +201,7 @@ export function getInformation(locale: Locale) {
 - ${options.owner.name} (${options.owner.id})
 
 # Boost count
-- ${options.count.boost}
+- ${options.count.boost} boost(s)
 
 # Member count (Bot include)
 - ${options.count.member} member(s)
@@ -209,7 +216,10 @@ export function getInformation(locale: Locale) {
 - ${options.count.emoji} emoji(s)
 
 # Sticky count
-- ${options.count.sticky} sticky(s)`,
+- ${options.count.sticky} sticky(s)
+
+# Create date
+- ${options.create.date} (${options.create.ago})`,
         )
       },
       user(options: InformationUserOptions) {
