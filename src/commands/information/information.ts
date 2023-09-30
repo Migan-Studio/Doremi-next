@@ -2,6 +2,7 @@ import { english, korean, localzation, getInformation } from '@localization'
 import { Command } from 'discommand'
 import { type ChatInputCommandInteraction, ComponentType } from 'discord.js'
 import { platform, arch } from 'node:os'
+import { informationSelect } from '@interaction'
 
 export default class Information extends Command {
   public constructor() {
@@ -13,9 +14,8 @@ export default class Information extends Command {
     })
   }
 
-  public execute(interaction: ChatInputCommandInteraction<'cached'>) {
+  public async execute(interaction: ChatInputCommandInteraction<'cached'>) {
     const locale = localzation(interaction.locale)
-    const OWNER_ID = interaction.client.config.bot.owner_id
 
     if (interaction.channel!.isDMBased()) {
       return interaction.reply({
@@ -24,7 +24,7 @@ export default class Information extends Command {
       })
     }
 
-    interaction.reply({
+    const response = await interaction.reply({
       embeds: [
         {
           title: locale.information.embeds.title.replace(
@@ -36,7 +36,9 @@ export default class Information extends Command {
               platform: platform(),
               arch: arch(),
             },
-            owner: interaction.client.users.cache.get(OWNER_ID)!.username,
+            owner: interaction.client.users.cache.get(
+              interaction.client.OWNER_ID,
+            )!.username,
             nodeJSVersion: process.version,
             pid: process.pid,
             count: {
@@ -69,29 +71,29 @@ export default class Information extends Command {
                       '{name}',
                       interaction.client.user.username,
                     ),
-                  value: 'Doremi-information$home',
+                  value: 'Doremi-information$bot',
                 },
                 {
                   label: locale.information.components.label.replace(
                     '{name}',
-                    interaction.client.user.username,
+                    interaction.guild.name,
                   ),
                   description:
                     locale.information.components.description.replace(
                       '{name}',
-                      interaction.client.user.username,
+                      interaction.guild.name,
                     ),
                   value: 'Doremi-information$guild',
                 },
                 {
                   label: locale.information.components.label.replace(
                     '{name}',
-                    interaction.client.user.username,
+                    interaction.user.username,
                   ),
                   description:
                     locale.information.components.description.replace(
                       '{name}',
-                      interaction.client.user.username,
+                      interaction.user.username,
                     ),
                   value: 'Doremi-information$user',
                 },
@@ -101,5 +103,20 @@ export default class Information extends Command {
         },
       ],
     })
+
+    response
+      .createMessageComponentCollector({
+        filter: i => i.user.id === interaction.user.id,
+        time: 1_800_000,
+        componentType: ComponentType.StringSelect,
+      })
+      .on('collect', i => {
+        informationSelect(i)
+      })
+      .on('end', () => {
+        interaction.editReply({
+          components: [],
+        })
+      })
   }
 }

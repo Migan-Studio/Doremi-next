@@ -1,5 +1,5 @@
 import { DiscommandClient } from 'discommand'
-import { GatewayIntentBits, Partials } from 'discord.js'
+import { GatewayIntentBits, Partials, Snowflake } from 'discord.js'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 // import { ComponentPlugin } from '@discommand/message-components'
@@ -21,6 +21,7 @@ export default class DoremiClient extends DiscommandClient {
     name: 'Doremi',
   })
   public readonly COLOR = 0xef8723
+  public readonly OWNER_ID = config.bot.owner_id
   public readonly config = config
   public constructor() {
     super(
@@ -67,6 +68,7 @@ declare module 'discord.js' {
     get version(): string
     readonly logger: Logger
     readonly COLOR: number
+    readonly OWNER_ID: Snowflake
     readonly config: DoremiConfig
   }
 }
