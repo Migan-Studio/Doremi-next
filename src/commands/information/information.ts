@@ -107,7 +107,7 @@ export default class Information extends Command {
     response
       .createMessageComponentCollector({
         filter: i => i.user.id === interaction.user.id,
-        time: 1_800_000,
+        time: 600000,
         componentType: ComponentType.StringSelect,
       })
       .on('collect', i => {
