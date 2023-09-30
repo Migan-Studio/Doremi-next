@@ -40,6 +40,9 @@ export function informationSelect(
             }),
             color: interaction.client.COLOR,
             timestamp: new Date().toISOString(),
+            thumbnail: {
+              url: interaction.client.user.displayAvatarURL(),
+            },
           },
         ],
       })

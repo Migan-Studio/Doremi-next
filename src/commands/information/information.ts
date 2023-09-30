@@ -51,6 +51,9 @@ export default class Information extends Command {
           }),
           color: interaction.client.COLOR,
           timestamp: new Date().toISOString(),
+          thumbnail: {
+            url: interaction.client.user.displayAvatarURL(),
+          },
         },
       ],
       components: [
