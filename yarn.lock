@@ -1142,6 +1142,7 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.0.0"
     prettier: "npm:^3.0.3"
     semver: "npm:^7.5.4"
+    timeago.js: "npm:^4.0.2"
     tsup: "npm:^7.2.0"
     typescript: "npm:^5.2.2"
   languageName: unknown
@@ -2989,6 +2990,13 @@ __metadata:
   dependencies:
     any-promise: "npm:^1.0.0"
   checksum: 486e1283a867440a904e36741ff1a177faa827cf94d69506f7e3ae4187b9afdf9ec368b3d8da225c192bfe2eb943f3f0080594156bf39f21b57cd1411e2e7f6d
+  languageName: node
+  linkType: hard
+
+"timeago.js@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "timeago.js@npm:4.0.2"
+  checksum: 30e38e8a82f885d95162e66bf7d9673a14c5fe7aff3f5b3e3d74fe5c431046da23194f1d4ab6bbd259b8d3504b47a0478429c147dee496036701f8b89e5951f3
   languageName: node
   linkType: hard
 

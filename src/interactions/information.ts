@@ -1,4 +1,4 @@
-import { getInformation, localzation } from '@localization'
+import { getInformation, localzation, time, timeago } from '@localization'
 import {
   GuildVerificationLevel,
   Locale,
@@ -117,6 +117,78 @@ export function informationSelect(
             timestamp: new Date().toISOString(),
             thumbnail: {
               url: interaction.guild.iconURL()!,
+            },
+          },
+        ],
+      })
+      break
+
+    case 'Doremi-information$user':
+      const member = interaction.guild.members.cache.get(interaction.user.id)!
+
+      function returnPresence() {
+        if (interaction.locale === Locale.Korean) {
+          if (!member.presence?.status) {
+            return '없음'
+          }
+          switch (member.presence.status) {
+            case 'online':
+              return '온라인'
+            case 'idle':
+              return '자리 비움'
+            case 'dnd':
+              return '다른 용무 중'
+            case 'offline':
+              return '오프라인'
+          }
+        } else {
+          if (!member.presence?.status) {
+            return 'None'
+          } else {
+            return member.presence.status
+          }
+        }
+      }
+
+      function isBot() {
+        if (interaction.locale === Locale.Korean) {
+          return member.user.bot ? '봇이 맞아요' : '봇이 아니에요'
+        } else {
+          return member.user.bot ? 'Bot' : 'Not bot'
+        }
+      }
+      interaction.update({
+        embeds: [
+          {
+            title: locale.information.embeds.title.replace(
+              '{name}',
+              interaction.user.username,
+            ),
+            description: getInformation(interaction.locale).user({
+              name: member.user.username,
+              status: returnPresence(),
+              isBot: isBot(),
+              nickname:
+                member.nickname || locale.information.embeds.none_nickname,
+              create: {
+                date: time(
+                  interaction.locale,
+                  new Date(member.user.createdTimestamp),
+                ),
+                ago: timeago(member.user.createdTimestamp, interaction.locale),
+              },
+              join: {
+                date: time(
+                  interaction.locale,
+                  new Date(member.joinedTimestamp!),
+                ),
+                ago: timeago(member.joinedTimestamp!, interaction.locale),
+              },
+            }),
+            color: interaction.client.COLOR,
+            timestamp: new Date().toISOString(),
+            thumbnail: {
+              url: member.user.displayAvatarURL(),
             },
           },
         ],

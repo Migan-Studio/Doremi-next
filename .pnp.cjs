@@ -42,6 +42,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-prettier", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:5.0.0"],\
           ["prettier", "npm:3.0.3"],\
           ["semver", "npm:7.5.4"],\
+          ["timeago.js", "npm:4.0.2"],\
           ["tsup", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:7.2.0"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
@@ -1508,6 +1509,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-prettier", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:5.0.0"],\
           ["prettier", "npm:3.0.3"],\
           ["semver", "npm:7.5.4"],\
+          ["timeago.js", "npm:4.0.2"],\
           ["tsup", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:7.2.0"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
@@ -3531,6 +3533,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["thenify-all", "npm:1.6.0"],\
           ["thenify", "npm:3.3.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["timeago.js", [\
+      ["npm:4.0.2", {\
+        "packageLocation": "./.yarn/cache/timeago.js-npm-4.0.2-e87d64f9a3-30e38e8a82.zip/node_modules/timeago.js/",\
+        "packageDependencies": [\
+          ["timeago.js", "npm:4.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\

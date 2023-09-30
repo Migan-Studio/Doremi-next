@@ -59,6 +59,14 @@ interface InformationUserOptions {
     | 'None'
   isBot: string
   nickname: string
+  create: {
+    date: string
+    ago: string
+  }
+  join: {
+    date: string
+    ago: string
+  }
 }
 
 export function getInformation(locale: Locale) {
@@ -136,7 +144,13 @@ export function getInformation(locale: Locale) {
 - ${options.isBot}
 
 # 별명
-- ${options.nickname}`,
+- ${options.nickname}
+
+# 계정 생성일
+- ${options.create.date} (${options.create.ago})
+
+# 길드 가입일
+- ${options.join.date} (${options.join.ago})`,
         )
       },
     }
@@ -211,7 +225,13 @@ export function getInformation(locale: Locale) {
 - ${options.isBot}
 
 # Nickname
-- ${options.nickname}`,
+- ${options.nickname}
+
+# Create date
+- ${options.create.date} (${options.create.ago})
+
+# Guild join date
+- ${options.join.date} (${options.join.ago})`,
         )
       },
     }
