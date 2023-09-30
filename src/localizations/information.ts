@@ -102,25 +102,25 @@ export function getInformation(locale: Locale) {
 - ${options.owner.name} (${options.owner.id})
 
 # 부스트 갯수
-- ${options.count.boost}
+- ${options.count.boost}개
 
 # 보안단계
 - ${options.security}
 
 # 멤버  (봇 포함)
-- ${options.count.member}
+- ${options.count.member}명
 
 # 봇 개수
-- ${options.count.bot}
+- ${options.count.bot}개
 
 # 멤버 수 (봇 제외)
-- ${options.count.memberOnly}
+- ${options.count.memberOnly}명
 
 # 이모지 수
-- ${options.count.emoji}
+- ${options.count.emoji}개
 
 # 스티커 수
-- ${options.count.sticky}`,
+- ${options.count.sticky}개`,
         )
       },
       user(options: InformationUserOptions) {
@@ -158,13 +158,13 @@ export function getInformation(locale: Locale) {
 - ${options.pid}
 
 # Guild count
-- ${options.count.guild}
+- ${options.count.guild} guild(s)
 
 # User count
-- ${options.count.user}
+- ${options.count.user} user(s)
 
 # Ping
-- ${options.wsPing}
+- ${options.wsPing}ms
 
 # ${options.botName} version
 - ${options.version}`,
@@ -183,19 +183,19 @@ export function getInformation(locale: Locale) {
 - ${options.count.boost}
 
 # Member count (Bot include)
-- ${options.count.member}
+- ${options.count.member} member(s)
 
 # Bot count
-- ${options.count.bot}
+- ${options.count.bot} bot(s)
 
 # Member count (Bot exclude)
-- ${options.count.memberOnly}
+- ${options.count.memberOnly} member(s)
 
 # Emoji count
-- ${options.count.emoji}
+- ${options.count.emoji} emoji(s)
 
 # Sticky count
-- ${options.count.sticky}`,
+- ${options.count.sticky} sticky(s)`,
         )
       },
       user(options: InformationUserOptions) {
