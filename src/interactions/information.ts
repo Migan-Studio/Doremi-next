@@ -1,4 +1,4 @@
-import { getInformation, localzation, time, timeago } from '@localization'
+import { getInformation, localization, time, timeago } from '@localization'
 import {
   GuildVerificationLevel,
   Locale,
@@ -9,7 +9,7 @@ import { arch, platform } from 'node:os'
 export function informationSelect(
   interaction: StringSelectMenuInteraction<'cached'>,
 ) {
-  const locale = localzation(interaction.locale)
+  const locale = localization(interaction.locale)
 
   switch (interaction.values[0]) {
     case 'Doremi-information$bot':

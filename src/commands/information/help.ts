@@ -1,5 +1,5 @@
 import { Command } from 'discommand'
-import { english, korean, localzation } from '@localization'
+import { english, korean, localization } from '@localization'
 import { ChatInputCommandInteraction, Locale } from 'discord.js'
 
 export default class Help extends Command {
@@ -14,7 +14,7 @@ export default class Help extends Command {
 
   public execute(interaction: ChatInputCommandInteraction<'cached'>) {
     const commandNameList: string[] = []
-    const locale = localzation(interaction.locale)
+    const locale = localization(interaction.locale)
 
     interaction.client.commandHandler.modules.forEach(command => {
       if (command instanceof Command) {

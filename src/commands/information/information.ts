@@ -1,4 +1,4 @@
-import { english, korean, localzation, getInformation } from '@localization'
+import { english, korean, localization, getInformation } from '@localization'
 import { Command } from 'discommand'
 import { type ChatInputCommandInteraction, ComponentType } from 'discord.js'
 import { platform, arch } from 'node:os'
@@ -15,7 +15,7 @@ export default class Information extends Command {
   }
 
   public async execute(interaction: ChatInputCommandInteraction<'cached'>) {
-    const locale = localzation(interaction.locale)
+    const locale = localization(interaction.locale)
 
     if (interaction.channel!.isDMBased()) {
       return interaction.reply({

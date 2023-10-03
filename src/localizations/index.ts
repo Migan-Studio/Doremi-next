@@ -3,7 +3,7 @@ import english from './json/en.json'
 import korean from './json/ko.json'
 import { TDate, format, register } from 'timeago.js'
 
-export function localzation(locale: Locale) {
+export function localization(locale: Locale) {
   if (locale === Locale.Korean) {
     return korean
   } else {
