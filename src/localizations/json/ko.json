@@ -15,5 +15,23 @@
       "description": "{name}의 관한 정보"
     }
   },
-  "is_dm": "❌ 개인 메세지에선 해당 명령어를 사용 할 수 없어요 :("
+  "kick": {
+    "name": "추방",
+    "description": "Doremi의 추방",
+    "options": {
+      "member": {
+        "name": "멤버",
+        "description": "추방하고 싶은 멤버"
+      },
+      "reason": {
+        "name": "사유",
+        "description": "추방하는 이유"
+      }
+    }
+  },
+  "is_dm": "❌ 개인 메세지에선 해당 명령어를 사용 할 수 없어요 :(",
+  "if_dont_have_permission": {
+    "user": "❌ 당신은 {permission}권한이 없어요 :(",
+    "bot": "❌ 이 봇에 {permission}권한이 없어요 :("
+  }
 }

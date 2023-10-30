@@ -70,5 +70,9 @@ declare module 'discord.js' {
     readonly COLOR: number
     readonly OWNER_ID: Snowflake
     readonly config: DoremiConfig
+    banNkick: {
+      member: GuildMember
+      reason: string | null
+    }
   }
 }

@@ -15,5 +15,24 @@
       "description": "Information for {name}"
     }
   },
-  "is_dm": "❌ Can't Using the DM :("
+  "kick": {
+    "name": "kick",
+    "description": "Doremi's kick",
+    "options": {
+      "member": {
+        "name": "member",
+        "description": "Member to kick"
+      },
+      "reason": {
+        "name": "reason",
+        "description": "A reason to kick"
+      }
+    }
+  },
+  "is_dm": "❌ Can't Using the DM :(",
+
+  "if_dont_have_permission": {
+    "user": "❌ You don't have {permission} permission. :(",
+    "bot": "❌ This bot don't have {permission} permission. :("
+  }
 }

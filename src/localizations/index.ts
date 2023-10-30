@@ -1,4 +1,4 @@
-import { Locale } from 'discord.js'
+import { Locale, PermissionFlagsBits } from 'discord.js'
 import english from './json/en.json'
 import korean from './json/ko.json'
 import { TDate, format, register } from 'timeago.js'
@@ -43,6 +43,52 @@ export function time(locale: Locale, time: Date) {
     return time.toLocaleDateString('ko-KR')
   } else {
     return time.toLocaleDateString('en-US')
+  }
+}
+
+export function getPermissionLocalization(locale: Locale, permission: bigint) {
+  if (locale === Locale.Korean) {
+    switch (permission) {
+      case PermissionFlagsBits.KickMembers:
+        return '멤버 추방하기'
+    }
+  } else {
+    switch (permission) {
+      case PermissionFlagsBits.KickMembers:
+        return 'Kick Members'
+    }
+  }
+}
+
+export function isHavePermission(options: {
+  locale: Locale
+  permission: string
+  isBot?: boolean
+}) {
+  if (options.locale === Locale.Korean) {
+    if (options.isBot) {
+      return korean.if_dont_have_permission.bot.replace(
+        '{permission}',
+        options.permission,
+      )
+    } else {
+      return korean.if_dont_have_permission.user.replace(
+        '{permission}',
+        options.permission,
+      )
+    }
+  } else {
+    if (options.isBot) {
+      return korean.if_dont_have_permission.bot.replace(
+        '{permission}',
+        options.permission,
+      )
+    } else {
+      return korean.if_dont_have_permission.user.replace(
+        '{permission}',
+        options.permission,
+      )
+    }
   }
 }
 
