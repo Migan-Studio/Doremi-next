@@ -1,6 +1,6 @@
 import { Locale, PermissionFlagsBits } from 'discord.js'
-import english from './json/en.json'
-import korean from './json/ko.json'
+import english from './langs/en.json'
+import korean from './langs/ko.json'
 import { TDate, format, register } from 'timeago.js'
 
 export function localization(locale: Locale) {
