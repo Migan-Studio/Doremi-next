@@ -39,8 +39,31 @@
       "cancel": "Cancel"
     }
   },
+  "ban": {
+    "name": "ban",
+    "description": "Doremi's ban",
+    "options": {
+      "member": {
+        "name": "member",
+        "description": "Member to ban"
+      },
+      "reason": {
+        "name": "reason",
+        "description": "A reason to ban"
+      }
+    },
+    "embeds": {
+      "question": "Do you really want to ban member {member}?",
+      "success": "Successfully banned member {member}.",
+      "cancel": "Canceled ban of member {member}.",
+      "fail": "I have a problem banning users."
+    },
+    "components": {
+      "yes": "Yes",
+      "cancel": "Cancel"
+    }
+  },
   "is_dm": "❌ Can't Using the DM :(",
-
   "if_dont_have_permission": {
     "user": "❌ You don't have {permission} permission. :(",
     "bot": "❌ This bot don't have {permission} permission. :("

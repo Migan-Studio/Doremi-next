@@ -39,6 +39,30 @@
       "cancel": "아니요"
     }
   },
+  "ban": {
+    "name": "차단",
+    "description": "Doremi의 차단",
+    "options": {
+      "member": {
+        "name": "멤버",
+        "description": "차단하고 싶은 멤버"
+      },
+      "reason": {
+        "name": "사유",
+        "description": "추방하는 이유"
+      }
+    },
+    "embeds": {
+      "question": "멤버 {member}을/를 정말로 차단할까요?",
+      "success": "멤버 {member}을/를 성공적으로 차단했어요.",
+      "cancel": "멤버 {member}의 차단을 취소하였어요.",
+      "fail": "유저를 차단하는데 문제가 생겼어요."
+    },
+    "components": {
+      "yes": "예",
+      "cancel": "아니요"
+    }
+  },
   "is_dm": "❌ 개인 메세지에선 해당 명령어를 사용 할 수 없어요 :(",
   "if_dont_have_permission": {
     "user": "❌ 당신은 {permission}권한이 없어요 :(",
