@@ -1,6 +1,6 @@
 import { Command } from 'discommand'
 import { english, korean, localization } from '@localization'
-import { ChatInputCommandInteraction, Locale } from 'discord.js'
+import { type ChatInputCommandInteraction, Locale } from 'discord.js'
 
 export default class Help extends Command {
   public constructor() {

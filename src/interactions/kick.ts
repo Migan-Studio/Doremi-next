@@ -1,4 +1,4 @@
-import { ButtonInteraction } from 'discord.js'
+import { type ButtonInteraction } from 'discord.js'
 import type { KickOrBanOptions } from '@types'
 import { localization } from '@localization'
 
