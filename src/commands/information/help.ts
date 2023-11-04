@@ -37,7 +37,7 @@ export default class Help extends Command {
           thumbnail: {
             url: interaction.client.user.displayAvatarURL(),
           },
-          color: interaction.client.COLOR,
+          color: interaction.client.colors.basic,
         },
       ],
     })

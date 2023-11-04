@@ -20,7 +20,11 @@ export default class DoremiClient extends DiscommandClient {
   public readonly logger = new Logger({
     name: 'Doremi',
   })
-  public readonly COLOR = 0xef8723
+  public readonly colors = {
+    basic: 0xef8723,
+    warn: 0xff0000,
+    success: 0x00ff00,
+  }
   public readonly OWNER_ID = config.bot.owner_id
   public readonly config = config
   public constructor() {
@@ -67,12 +71,12 @@ declare module 'discord.js' {
   interface Client {
     get version(): string
     readonly logger: Logger
-    readonly COLOR: number
+    readonly colors: {
+      basic: number
+      warn: number
+      success: number
+    }
     readonly OWNER_ID: Snowflake
     readonly config: DoremiConfig
-    banNkick: {
-      member: GuildMember
-      reason: string | null
-    }
   }
 }

@@ -49,7 +49,7 @@ export default class Information extends Command {
             botName: interaction.client.user.username,
             version: interaction.client.version,
           }),
-          color: interaction.client.COLOR,
+          color: interaction.client.colors.basic,
           timestamp: new Date().toISOString(),
           thumbnail: {
             url: interaction.client.user.displayAvatarURL(),

@@ -38,7 +38,7 @@ export function informationSelect(
               botName: interaction.client.user.username,
               version: interaction.client.version,
             }),
-            color: interaction.client.COLOR,
+            color: interaction.client.colors.basic,
             timestamp: new Date().toISOString(),
             thumbnail: {
               url: interaction.client.user.displayAvatarURL(),
@@ -128,7 +128,7 @@ export function informationSelect(
             thumbnail: {
               url: interaction.guild.iconURL()!,
             },
-            color: interaction.client.COLOR,
+            color: interaction.client.colors.basic,
           },
         ],
       })
@@ -196,7 +196,7 @@ export function informationSelect(
                 ago: timeago(member.joinedTimestamp!, interaction.locale),
               },
             }),
-            color: interaction.client.COLOR,
+            color: interaction.client.colors.basic,
             timestamp: new Date().toISOString(),
             thumbnail: {
               url: member.user.displayAvatarURL(),
