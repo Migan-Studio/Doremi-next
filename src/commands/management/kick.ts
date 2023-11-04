@@ -9,8 +9,11 @@ import {
 import {
   ApplicationCommandOptionType,
   type ChatInputCommandInteraction,
+  ComponentType,
   PermissionFlagsBits,
+  ButtonStyle,
 } from 'discord.js'
+import { kickMember } from '@interaction'
 
 export default class Kick extends Command {
   public constructor() {
@@ -43,13 +46,13 @@ export default class Kick extends Command {
     })
   }
 
-  public execute(interaction: ChatInputCommandInteraction<'cached'>) {
+  public async execute(interaction: ChatInputCommandInteraction<'cached'>) {
     const member = interaction.options.getMember('member')!
     const reason = interaction.options.getString('reason')
     const locale = localization(interaction.locale)
 
     if (interaction.channel?.isDMBased()) {
-      return interaction.reply({
+      return await interaction.reply({
         content: locale.is_dm,
         ephemeral: true,
       })
@@ -60,7 +63,7 @@ export default class Kick extends Command {
         .get(interaction.user.id)!
         .permissions.has(PermissionFlagsBits.KickMembers)
     ) {
-      return interaction.reply({
+      return await interaction.reply({
         content: isHavePermission({
           locale: interaction.locale,
           permission: getPermissionLocalization(
@@ -77,7 +80,7 @@ export default class Kick extends Command {
         PermissionFlagsBits.KickMembers,
       )
     ) {
-      return interaction.reply({
+      return await interaction.reply({
         content: isHavePermission({
           locale: interaction.locale,
           permission: getPermissionLocalization(
@@ -90,9 +93,49 @@ export default class Kick extends Command {
       })
     }
 
-    interaction.client.banNkick = {
+    const response = await interaction.reply({
+      embeds: [
+        {
+          title: locale.kick.name,
+          description: locale.kick.embeds.question.replace(
+            '{member}',
+            member.user.username,
+          ),
+          color: interaction.client.colors.basic,
+          timestamp: new Date().toISOString(),
+        },
+      ],
+      components: [
+        {
+          type: ComponentType.ActionRow,
+          components: [
+            {
+              type: ComponentType.Button,
+              customId: 'Doremi-kick$yes',
+              label: locale.kick.components.yes,
+              style: ButtonStyle.Success,
+            },
+            {
+              type: ComponentType.Button,
+              customId: 'Doremi-kick$cancel',
+              label: locale.kick.components.cancel,
+              style: ButtonStyle.Danger,
+            },
+          ],
+        },
+      ],
+      ephemeral: true,
+    })
+
+    const confirmation =
+      await response.awaitMessageComponent<ComponentType.Button>({
+        filter: i => i.user.id === interaction.user.id,
+        time: 600_000,
+      })
+
+    await kickMember(confirmation, {
       member,
       reason,
-    }
+    })
   }
 }

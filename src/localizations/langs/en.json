@@ -27,6 +27,16 @@
         "name": "reason",
         "description": "A reason to kick"
       }
+    },
+    "embeds": {
+      "question": "Do you really want to kick member {member}?",
+      "success": "Successfully kicked member {member}.",
+      "cancel": "Canceled kick of member {member}.",
+      "fail": "I have a problem kicking users."
+    },
+    "components": {
+      "yes": "Yes",
+      "cancel": "Cancel"
     }
   },
   "is_dm": "❌ Can't Using the DM :(",
