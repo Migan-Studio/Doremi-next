@@ -63,6 +63,17 @@
       "cancel": "아니요"
     }
   },
+  "unban": {
+    "name": "차단해제",
+    "description": "Doremi의 차단해제",
+    "options": {
+      "id": {
+        "name": "ID",
+        "description": "차단해제할 멤버의 ID."
+      }
+    },
+    "is_NaN": "`ID`엔 멤버 ID만 넣어주세요."
+  },
   "is_dm": "❌ 개인 메세지에선 해당 명령어를 사용 할 수 없어요 :(",
   "if_dont_have_permission": {
     "user": "❌ 당신은 {permission}권한이 없어요 :(",

@@ -63,6 +63,17 @@
       "cancel": "Cancel"
     }
   },
+  "unban": {
+    "name": "unban",
+    "description": "Doremi's unban",
+    "options": {
+      "id": {
+        "name": "ID",
+        "description": "ID of the member you want to unban."
+      }
+    },
+    "is_NaN": "Please put only the member ID in the `ID`."
+  },
   "is_dm": "❌ Can't Using the DM :(",
   "if_dont_have_permission": {
     "user": "❌ You don't have {permission} permission. :(",

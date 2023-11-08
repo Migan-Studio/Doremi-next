@@ -51,11 +51,15 @@ export function getPermissionLocalization(locale: Locale, permission: bigint) {
     switch (permission) {
       case PermissionFlagsBits.KickMembers:
         return '멤버 추방하기'
+      case PermissionFlagsBits.ManageMessages:
+        return '메세지 관리'
     }
   } else {
     switch (permission) {
       case PermissionFlagsBits.KickMembers:
         return 'Kick Members'
+      case PermissionFlagsBits.ManageMessages:
+        return 'Manage Messages'
     }
   }
 }
