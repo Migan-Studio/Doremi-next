@@ -111,7 +111,5 @@ export default class Unban extends Command {
         ephemeral: true,
       })
     }
-
-    await interaction.reply('This is a unban command!')
   }
 }
