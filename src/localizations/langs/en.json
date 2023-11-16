@@ -67,12 +67,19 @@
     "name": "unban",
     "description": "Doremi's unban",
     "options": {
-      "id": {
-        "name": "ID",
-        "description": "ID of the member you want to unban."
+      "member": {
+        "name": "member",
+        "description": "Member to unban"
       }
     },
-    "is_NaN": "Please put only the member ID in the `ID`."
+    "embeds": {
+      "question": "Are you sure you want to unblock member {member}?"
+    },
+    "components": {
+      "yes": "Yes",
+      "cancel": "Cancel"
+    },
+    "is_none": "I can't find the corresponding member :("
   },
   "is_dm": "❌ Can't Using the DM :(",
   "if_dont_have_permission": {

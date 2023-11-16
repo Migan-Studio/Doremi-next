@@ -67,15 +67,19 @@
     "name": "차단해제",
     "description": "Doremi의 차단해제",
     "options": {
-      "id": {
-        "name": "ID",
-        "description": "차단해제할 멤버의 ID."
+      "member": {
+        "name": "멤버",
+        "description": "차단해제할 멤버"
       }
     },
     "embeds": {
-      "question": ""
+      "question": "정말 멤버 {member}를 차단해제 하시겠어요?"
     },
-    "is_NaN": "`ID`엔 멤버 ID만 넣어주세요."
+    "components": {
+      "yes": "예",
+      "cancel": "아니요"
+    },
+    "is_none": "해당하는 멤버를 찾을 수 없어요 :("
   },
   "is_dm": "❌ 개인 메세지에선 해당 명령어를 사용 할 수 없어요 :(",
   "if_dont_have_permission": {

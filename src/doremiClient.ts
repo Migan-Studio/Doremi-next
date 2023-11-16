@@ -25,6 +25,7 @@ export default class DoremiClient extends DiscommandClient {
           GatewayIntentBits.Guilds,
           GatewayIntentBits.GuildMembers,
           GatewayIntentBits.GuildPresences,
+          GatewayIntentBits.GuildModeration,
         ],
         partials: [Partials.Channel],
       },
