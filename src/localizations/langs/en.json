@@ -73,7 +73,10 @@
       }
     },
     "embeds": {
-      "question": "Are you sure you want to unblock member {member}?"
+      "question": "Are you sure you want to unblock member {member}?",
+      "success": "Successfully unbanned member {member}.",
+      "cancel": "Canceled unban of member {member}.",
+      "fail": "I have a problem unbanning users."
     },
     "components": {
       "yes": "Yes",

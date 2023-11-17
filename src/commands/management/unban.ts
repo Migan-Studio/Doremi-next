@@ -11,9 +11,9 @@ import {
   ButtonStyle,
   type ChatInputCommandInteraction,
   ComponentType,
-  GuildBan,
   PermissionFlagsBits,
 } from 'discord.js'
+import { unbanMember } from '@interaction'
 
 export default class Unban extends Command {
   public constructor() {
@@ -99,7 +99,7 @@ export default class Unban extends Command {
       })
     }
 
-    await interaction.reply({
+    const response = await interaction.reply({
       embeds: [
         {
           title: locale.unban.name,
@@ -132,5 +132,13 @@ export default class Unban extends Command {
       ],
       ephemeral: true,
     })
+
+    const confirmation =
+      await response.awaitMessageComponent<ComponentType.Button>({
+        filter: i => i.user.id === interaction.user.id,
+        time: 600_000,
+      })
+
+    await unbanMember(confirmation, member)
   }
 }

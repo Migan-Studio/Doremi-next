@@ -73,7 +73,10 @@
       }
     },
     "embeds": {
-      "question": "정말 멤버 {member}를 차단해제 하시겠어요?"
+      "question": "정말 멤버 {member}를 차단해제 하시겠어요?",
+      "success": "멤버 {member}을/를 차단해제 했어요.",
+      "cancel": "멤버 {member}의 차단해제를 취소했어요.",
+      "fail": "유저를 차단해제 하는데 문제가 생겼어요."
     },
     "components": {
       "yes": "예",
