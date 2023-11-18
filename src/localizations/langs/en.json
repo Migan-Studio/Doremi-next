@@ -101,7 +101,7 @@
   },
   "is_dm": "❌ Can't Using the DM :(",
   "if_dont_have_permission": {
-    "user": "❌ You don't have {permission} permission. :(",
-    "bot": "❌ This bot don't have {permission} permission. :("
+    "user": "❌ You don't have {permission} permission :(",
+    "bot": "❌ This bot don't have {permission} permission :("
   }
 }
