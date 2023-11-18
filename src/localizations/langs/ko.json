@@ -96,7 +96,7 @@
     "embeds": {
       "max_value": "`시간`값은 {time}{smh}보다 적어야해요.",
       "success": "슬로우모드를 {time}(으)로 설정했어요.",
-      "time_error": "`time`값은 아래와 같은 형식이여야 해요.\n```\n1초\n2 분\n6 시간\n```"
+      "time_error": "`시간`값은 아래와 같은 형식이여야 해요.\n```\n1초\n2 분\n6 시간\n```"
     }
   },
   "if_dont_have_permission": "❌ 이 봇에 {permission}권한이 없어요 :("
