@@ -1,7 +1,6 @@
 import { Command } from 'discommand'
 import {
   english,
-  isHavePermission,
   korean,
   localization,
   getPermissionLocalization,
@@ -43,6 +42,8 @@ export default class Kick extends Command {
           },
         },
       ],
+      dmPermission: false,
+      defaultMemberPermissions: [PermissionFlagsBits.KickMembers],
     })
   }
 
@@ -51,45 +52,26 @@ export default class Kick extends Command {
     const reason = interaction.options.getString('reason')
     const locale = localization(interaction.locale)
 
-    if (interaction.channel?.isDMBased()) {
-      return await interaction.reply({
-        content: locale.is_dm,
-        ephemeral: true,
-      })
-    }
-
-    if (
-      !interaction.guild.members.cache
-        .get(interaction.user.id)!
-        .permissions.has(PermissionFlagsBits.KickMembers)
-    ) {
-      return await interaction.reply({
-        content: isHavePermission({
-          locale: interaction.locale,
-          permission: getPermissionLocalization(
-            interaction.locale,
-            PermissionFlagsBits.KickMembers,
-          )!,
-        }),
-        ephemeral: true,
-      })
-    }
-
     if (
       !interaction.guild.members.me!.permissions.has(
         PermissionFlagsBits.KickMembers,
       )
     ) {
       return await interaction.reply({
-        content: isHavePermission({
-          locale: interaction.locale,
-          permission: getPermissionLocalization(
-            interaction.locale,
-            PermissionFlagsBits.KickMembers,
-          )!,
-          isBot: true,
-        }),
-        ephemeral: true,
+        embeds: [
+          {
+            title: locale.kick.name,
+            description: locale.if_dont_have_permission.replace(
+              '{permission}',
+              getPermissionLocalization(
+                interaction.locale,
+                PermissionFlagsBits.KickMembers,
+              )!,
+            ),
+            color: interaction.client.colors.warn,
+            timestamp: new Date().toISOString(),
+          },
+        ],
       })
     }
 

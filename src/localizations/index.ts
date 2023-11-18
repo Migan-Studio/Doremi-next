@@ -68,38 +68,6 @@ export function getPermissionLocalization(locale: Locale, permission: bigint) {
   }
 }
 
-export function isHavePermission(options: {
-  locale: Locale
-  permission: string
-  isBot?: boolean
-}) {
-  if (options.locale === Locale.Korean) {
-    if (options.isBot) {
-      return korean.if_dont_have_permission.bot.replace(
-        '{permission}',
-        options.permission,
-      )
-    } else {
-      return korean.if_dont_have_permission.user.replace(
-        '{permission}',
-        options.permission,
-      )
-    }
-  } else {
-    if (options.isBot) {
-      return korean.if_dont_have_permission.bot.replace(
-        '{permission}',
-        options.permission,
-      )
-    } else {
-      return korean.if_dont_have_permission.user.replace(
-        '{permission}',
-        options.permission,
-      )
-    }
-  }
-}
-
 export function getSmhdw(
   locale: Locale,
   smhdw: 'sec' | 'minute' | 'hour' | 'day' | 'week',

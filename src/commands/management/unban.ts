@@ -70,7 +70,7 @@ export default class Unban extends Command {
         embeds: [
           {
             title: locale.unban.name,
-            description: locale.if_dont_have_permission.bot.replace(
+            description: locale.if_dont_have_permission.replace(
               '{permission}',
               getPermissionLocalization(
                 interaction.locale,

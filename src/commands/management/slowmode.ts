@@ -57,7 +57,7 @@ export default class Slowmode extends Command {
         embeds: [
           {
             title: locale.slowmode.name,
-            description: locale.if_dont_have_permission.bot.replace(
+            description: locale.if_dont_have_permission.replace(
               '{permission}',
               getPermissionLocalization(
                 interaction.locale,
