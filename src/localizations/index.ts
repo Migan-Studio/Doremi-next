@@ -53,6 +53,8 @@ export function getPermissionLocalization(locale: Locale, permission: bigint) {
         return '멤버 추방하기'
       case PermissionFlagsBits.ManageMessages:
         return '메세지 관리'
+      case PermissionFlagsBits.ManageChannels:
+        return '채널 관리하기'
     }
   } else {
     switch (permission) {
@@ -60,6 +62,8 @@ export function getPermissionLocalization(locale: Locale, permission: bigint) {
         return 'Kick Members'
       case PermissionFlagsBits.ManageMessages:
         return 'Manage Messages'
+      case PermissionFlagsBits.ManageChannels:
+        return 'Manage Channels'
     }
   }
 }
@@ -93,6 +97,28 @@ export function isHavePermission(options: {
         options.permission,
       )
     }
+  }
+}
+
+export function getSmhdw(
+  locale: Locale,
+  smhdw: 'sec' | 'minute' | 'hour' | 'day' | 'week',
+) {
+  if (locale === Locale.Korean) {
+    switch (smhdw) {
+      case 'sec':
+        return '초'
+      case 'minute':
+        return '분'
+      case 'hour':
+        return '시간'
+      case 'day':
+        return '일'
+      case 'week':
+        return '주'
+    }
+  } else {
+    return smhdw
   }
 }
 

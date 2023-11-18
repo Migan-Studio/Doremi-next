@@ -84,6 +84,21 @@
     },
     "is_none": "I can't find the corresponding member :("
   },
+  "slowmode": {
+    "name": "slowmode",
+    "description": "Doremi's slowmode",
+    "options": {
+      "time": {
+        "name": "time",
+        "description": "slowmode time"
+      }
+    },
+    "embeds": {
+      "max_value": "`time` value must be less than {time}{smh}.",
+      "success": "You have set slowmode to {time}.",
+      "time_error": "The time value should be in the format below.\\n```\\n1 sec\\n3 minutes\\n6hours\\n```"
+    }
+  },
   "is_dm": "❌ Can't Using the DM :(",
   "if_dont_have_permission": {
     "user": "❌ You don't have {permission} permission. :(",
