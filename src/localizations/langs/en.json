@@ -96,7 +96,7 @@
     "embeds": {
       "max_value": "`time` value must be less than {time}{smh}.",
       "success": "You have set slowmode to {time}.",
-      "time_error": "The time value should be in the format below.\\n```\\n1 sec\\n3 minutes\\n6hours\\n```"
+      "time_error": "The time value should be in the format below.\n```\n1 sec\n3 minutes\n6hours\n```"
     }
   },
   "if_dont_have_permission": "❌ This bot don't have {permission} permission :("
