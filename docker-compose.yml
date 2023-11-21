@@ -1,0 +1,9 @@
+version: "3.9"
+
+
+services:
+  doremi:
+    container_name: doremi
+    build:
+      context: .
+      dockerfile: ./Dockerfile
