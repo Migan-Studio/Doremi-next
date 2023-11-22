@@ -1,7 +1,7 @@
 FROM node:20.9.0
 
 # Setting directory
-RUN makedir /app
+RUN mkdir /app
 WORKDIR /app
 
 # Copy code
