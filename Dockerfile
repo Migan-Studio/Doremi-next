@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Run validate dependency and build
-RUN yarn install --immutable --immutable-cache
+RUN yarn install
 RUN yarn build
 
 RUN rm -r src
