@@ -1,24 +1,25 @@
-CREATE TABLE
+create table
     guild (
-        id INTEGER NOT NULL,
-        owner_id VARCHAR(255 NOT NULL),
-        PRIMARY KEY('id') NOT NULL
+        id integer not null,
+        owner_id varchar(255 not null),
+        primary key('id')
     );
 
-CREATE TABLE
+create table
     warn (
-        id INTEGER NOT NULL,
-        warn_count INTEGER NOT NULL,
-        server_id VARCHAR(255) NOT NULL,
-        PRIMARY KEY('id')
+        id integer not null,
+        warn_count integer not null,
+        server_id varchar(255) not null,
+        user_id varchar(255) not null,
+        primary key('id')
     );
 
-CREATE TABLE
+create table
     ticket (
-        id INTEGER NOT NULL,
-        user_id VARCHAR(255) NOT NULL,
-        channel_id VARCHAR(255) NOT NULL,
-        closed BOOLEAN NOT NULL DEFAULT 0,
-        create_at DATETIME NOT NULL DEFAULT current_timestamp(),
-        PRIMARY KEY('id')
+        id integer not null,
+        user_id varchar(255) not null,
+        channel_id varchar(255) not null,
+        closed boolean not null default 0,
+        create_at datetime not null default current_timestamp(),
+        primary key('id')
     );
