@@ -12,6 +12,7 @@ create table
         warn_count integer not null,
         guild_id varchar(255) not null,
         user_id varchar(255) not null,
+        create_at datetime not null default current_timestamp(),
         primary key('id')
     );
 
