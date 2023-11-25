@@ -1,7 +1,7 @@
 create table
     guild (
         id integer not null,
-        owner_id varchar(255 not null),
+        owner_id varchar(255) not null,
         primary key('id')
     );
 
