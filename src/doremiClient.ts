@@ -3,11 +3,15 @@ import { GatewayIntentBits, Partials, Snowflake } from 'discord.js'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { Logger } from '@migan-studio/logger'
+import { Database } from '@utils'
 import config from '../config.json'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default class DoremiClient extends DiscommandClient {
+  public get database() {
+    return new Database().guild
+  }
   public readonly logger = new Logger({
     name: 'Doremi',
   })
