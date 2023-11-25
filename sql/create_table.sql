@@ -1,5 +1,5 @@
 CREATE TABLE
-    server (
+    guild (
         id INTEGER NOT NULL,
         owner_id VARCHAR(255 NOT NULL),
         PRIMARY KEY('id') NOT NULL
