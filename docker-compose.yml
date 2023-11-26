@@ -7,3 +7,24 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    networks:
+      - doremi_network
+    depends_on:
+      - database
+  database:
+    container_name: doremi_database
+    image: mariadb:10.9.4
+    volumes:
+      - "./database/:/var/lib/mysql"
+      - "/etc/localtime:/etc/localtime"
+      - "./sql/:/docker-entrypoint-initdb.d/"
+    env_file:
+      - ./.mariadb.env
+    ports:
+      - "1501:3306"
+    networks:
+      - doremi_network
+
+networks:
+  doremi_network:
+    driver: bridge
