@@ -99,5 +99,24 @@
       "time_error": "`시간`값은 아래와 같은 형식이여야 해요.\n```\n1초\n2 분\n6 시간\n```"
     }
   },
+  "timeout": {
+    "name": "타임아웃",
+    "description": "Doremi의 타임아웃",
+    "options": {
+      "member": {
+        "name": "멤버",
+        "description": "타임아웃 할 멤버"
+      },
+      "time": {
+        "name": "시간",
+        "description": "타임아웃 기간"
+      }
+    },
+    "embeds": {
+      "success": "{member}의 타임아웃을 설정했어요.",
+      "time_error": "`시간`값은 아래와 같은 형식이여야 해요.\n```\n3 분\n6 시간\n4일\n```"
+    }
+  },
+  "max_value": "`시간`값은 {time}{smh}보다 적어야해요.",
   "if_dont_have_permission": "❌ 이 봇에 {permission}권한이 없어요 :("
 }

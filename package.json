@@ -1,6 +1,6 @@
 {
   "name": "doremi",
-  "version": "4.0.0-56.next",
+  "version": "4.0.0-73.next",
   "main": "dist/index.js",
   "private": true,
   "type": "module",

@@ -99,5 +99,24 @@
       "time_error": "The time value should be in the format below.\n```\n1 sec\n3 minutes\n6hours\n```"
     }
   },
+  "timeout": {
+    "name": "timeout",
+    "description": "Doremi's timeout",
+    "options": {
+      "member": {
+        "name": "member",
+        "description": "timeout to member"
+      },
+      "time": {
+        "name": "time",
+        "description": "timeout time"
+      }
+    },
+    "embeds": {
+      "success": "Timeout set for {member}.",
+      "time_error": "The time value should be in the format below.\n```\n3m\n6hours\n4 days\n```"
+    }
+  },
+  "max_value": "`time` value must be less than {time}{smh}.",
   "if_dont_have_permission": "❌ This bot don't have {permission} permission :("
 }
