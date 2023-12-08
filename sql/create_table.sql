@@ -3,8 +3,8 @@ create table
         id integer not null,
         owner_id varchar(255) not null,
         guild_id varchar(255) not null,
-        primary key('id')
-    );
+        primary key (`id`)
+);
 
 create table
     warn (
@@ -13,8 +13,8 @@ create table
         guild_id varchar(255) not null,
         user_id varchar(255) not null,
         create_at datetime not null default current_timestamp(),
-        primary key('id')
-    );
+        primary key (`id`)
+);
 
 create table
     ticket (
@@ -24,5 +24,5 @@ create table
         closed boolean not null default 0,
         guild_id varchar(255) not null,
         create_at datetime not null default current_timestamp(),
-        primary key('id')
-    );
+        primary key (`id`)
+);
