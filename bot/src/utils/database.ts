@@ -60,7 +60,7 @@ class WarnTable {
     try {
       await db.beginTransaction()
       await db.execute(
-        `insert into warn (warn_count, guild_id, user_id) values (?, ?, ?);`,
+        `insert into warn (guild_id, user_id) values (?, ?, ?);`,
         [data.warn_count, data.guild_id, data.user_id],
       )
       await db.commit()

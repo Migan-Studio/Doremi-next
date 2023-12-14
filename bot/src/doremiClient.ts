@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default class DoremiClient extends DiscommandClient {
   public get database() {
-    return new Database().guild
+    return new Database()
   }
   public readonly logger = new Logger({
     name: 'Doremi',
