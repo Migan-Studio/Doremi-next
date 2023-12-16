@@ -1,6 +1,6 @@
 {
   "name": "doremi",
-  "version": "4.0.0-75.next",
+  "version": "4.0.0-76.next",
   "main": "dist/index.js",
   "private": true,
   "type": "module",
@@ -9,6 +9,7 @@
     "@discommand/message-components": "^2.1.0",
     "@migan-studio/logger": "^1.0.1",
     "@migan/koreanbots": "^1.2.0",
+    "axios": "^1.6.2",
     "chalk": "^5.3.0",
     "discommand": "^13.2.2",
     "discord.js": "^14.14.1",

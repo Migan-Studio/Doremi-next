@@ -1,2 +1,2 @@
 export * from './regex.js'
-export * from './database.js'
+export * from './rest/index.js'
