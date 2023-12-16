@@ -80,10 +80,10 @@ class TicketManager(private val database: Database) {
         }
     }
 
-    suspend fun update(channelId: String, closed: Boolean) {
+    suspend fun update(channelId: String, ticket: TicketUpdateRequest) {
         dbQuery {
             Tickets.update({ Tickets.channel_id eq channelId }) {
-                it[Tickets.closed] = closed
+                it[Tickets.closed] = ticket.closed
             }
         }
     }

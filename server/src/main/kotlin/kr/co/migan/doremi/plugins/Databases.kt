@@ -101,12 +101,11 @@ fun Application.configureDatabases() {
 
                 patch("/{channelId}") {
                     val channelId = call.parameters["channelId"] ?: throw IllegalArgumentException("Invalid id")
-                    val closed = call.receive<Boolean>()
-                    ticketManager.update(channelId, closed)
+                    val ticket = call.receive<TicketUpdateRequest>()
+                    ticketManager.update(channelId, ticket)
                     call.respond(HttpStatusCode.OK)
                 }
             }
-
         }
     }
 }

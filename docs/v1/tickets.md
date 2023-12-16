@@ -41,11 +41,9 @@
 
 - Body
 
-example
-
-```json
-false
-```
+| Field  | Type    | Description         |
+|--------|---------|---------------------|
+| closed | Boolean | Guild's id          |
 
 - Header
 
