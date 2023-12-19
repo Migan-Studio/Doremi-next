@@ -45,9 +45,7 @@ class GuildManager(private val database: Database) {
         }
     }
 
-    suspend fun delete(guildId: String) {
-        dbQuery {
-            Guilds.deleteWhere { Guilds.guild_id.eq(guildId) }
-        }
+    suspend fun delete(guildId: String) = dbQuery {
+        Guilds.deleteWhere { Guilds.guild_id.eq(guildId) }
     }
 }

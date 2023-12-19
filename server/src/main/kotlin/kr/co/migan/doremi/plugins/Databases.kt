@@ -6,7 +6,14 @@ import io.ktor.server.application.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import kotlinx.serialization.Serializable
 import org.jetbrains.exposed.sql.Database
+
+@Serializable
+data class Response(val code: String, val message: String)
+
+@Serializable
+data class ResponseData<T>(val code: String, val data: T, val message: String)
 
 fun Application.configureDatabases() {
     val dotenv = dotenv()
@@ -24,12 +31,6 @@ fun Application.configureDatabases() {
     routing {
         route("/v1") {
             route("/guilds") {
-                post("/create") {
-                    val guild = call.receive<GuildRequest>()
-                    guildManager.create(guild)
-                    call.respond(HttpStatusCode.Created)
-                }
-
                 get("/{guildId}") {
                     val guildId = call.parameters["guildId"] ?: throw IllegalArgumentException("Invalid id")
                     val guild = guildManager.read(guildId)
@@ -40,21 +41,9 @@ fun Application.configureDatabases() {
                         call.respond(HttpStatusCode.OK, guild)
                     }
                 }
-
-                delete("/{guildId}") {
-                    val guildId = call.parameters["guildId"] ?: throw IllegalArgumentException("Invalid id")
-                    guildManager.delete(guildId)
-                    call.respond(HttpStatusCode.OK)
-                }
             }
 
             route("/warns") {
-                post("/create") {
-                    val warn = call.receive<WarnRequest>()
-                    warnManager.create(warn)
-                    call.respond(HttpStatusCode.Created)
-                }
-
                 get("/{guildId}/{userId}") {
                     val guildId = call.parameters["guildId"] ?: throw IllegalArgumentException("Invalid guildId")
                     val userId =
@@ -67,21 +56,9 @@ fun Application.configureDatabases() {
                         call.respond(HttpStatusCode.OK, warn)
                     }
                 }
-
-                delete("/{id}") {
-                    val id = call.parameters["id"] ?: throw IllegalArgumentException("Invalid id")
-                    warnManager.delete(id)
-                    call.respond(HttpStatusCode.OK)
-                }
             }
 
             route("/tickets") {
-                post("/create") {
-                    val ticket = call.receive<TicketRequest>()
-                    ticketManager.create(ticket)
-                    call.respond(HttpStatusCode.Created)
-                }
-
                 get("/{ticketId}") {
                     val ticketId = call.parameters["ticketId"] ?: throw IllegalArgumentException("Invalid id")
                     val ticket = ticketManager.read(ticketId)
@@ -92,18 +69,124 @@ fun Application.configureDatabases() {
                         call.respond(HttpStatusCode.OK, ticket)
                     }
                 }
+            }
+        }
 
-                delete("/{ticketId}") {
-                    val ticketId = call.parameters["ticketId"] ?: throw IllegalArgumentException("Invalid id")
-                    ticketManager.delete(ticketId)
-                    call.respond(HttpStatusCode.OK)
+        route("/v2") {
+            route("/guilds") {
+                post("/create") {
+                    val data = call.receive<GuildRequest>()
+                    val id = guildManager.create(data)
+                    call.respond(HttpStatusCode.Created, Response("201", "Guild $id created."))
+                }
+
+                get("/{guildId}") {
+                    val guildId = call.parameters["guildId"] ?: throw IllegalArgumentException("Invalid id")
+                    val guild = guildManager.read(guildId)
+
+                    if (guild == null) {
+                        call.respond(HttpStatusCode.NotFound, Response("404", "Guild not found."))
+                    } else {
+                        call.respond(
+                            HttpStatusCode.OK,
+                            ResponseData("200", guild, "Guild ${guild.id} found.")
+                        )
+                    }
+                }
+
+                delete("/{guildId}") {
+                    val guildId = call.parameters["guildId"] ?: throw IllegalArgumentException("Invalid id")
+                    val guild = guildManager.read(guildId)
+
+                    if (guild == null) {
+                        call.respond(HttpStatusCode.NotFound, Response("404", "Guild not found.`"))
+                    } else {
+                        guildManager.delete(guildId)
+                        call.respond(HttpStatusCode.OK, Response("200", "Guild ${guild.id} deleted."))
+                    }
+                }
+            }
+
+            route("/warns") {
+                post("/create") {
+                    val data = call.receive<WarnRequest>()
+                    val id = warnManager.create(data)
+                    call.respond(HttpStatusCode.Created, Response("201", "Warn $id created."))
+                }
+
+                get("/{guildId}/{userId}") {
+                    val guildId = call.parameters["guildId"] ?: throw IllegalArgumentException("Invalid guildId")
+                    val userId = call.parameters["userId"] ?: throw IllegalArgumentException("Invalid userId")
+                    val warn = warnManager.read(guildId, userId)
+
+                    if (warn == null) {
+                        call.respond(HttpStatusCode.NotFound, Response("404", "Warn not found."))
+                    } else {
+                        call.respond(
+                            HttpStatusCode.OK,
+                            ResponseData("200", warn, "Warn ${warn.id} found.")
+                        )
+                    }
+                }
+
+                delete("/{guildId}/{userId}") {
+                    val guildId = call.parameters["guildId"] ?: throw IllegalArgumentException("Invalid id")
+                    val userId = call.parameters["userId"] ?: throw IllegalArgumentException("Invalid id")
+                    val warn = warnManager.read(guildId, userId)
+
+                    if (warn == null) {
+                        call.respond(HttpStatusCode.NotFound, Response("404", "Warn not found.`"))
+                    } else {
+                        warnManager.delete(warn.id)
+                        call.respond(HttpStatusCode.OK, Response("200", "Warn ${warn.id} deleted."))
+                    }
+                }
+            }
+
+            route("/tickets") {
+                post("/create") {
+                    val data = call.receive<TicketRequest>()
+                    val id = ticketManager.create(data)
+                    call.respond(HttpStatusCode.Created, Response("201", "Ticket $id created."))
+                }
+
+                get("/{channelId}") {
+                    val channelId = call.parameters["channelId"] ?: throw IllegalArgumentException("Invalid id")
+                    val ticket = ticketManager.read(channelId)
+
+                    if (ticket == null) {
+                        call.respond(HttpStatusCode.NotFound, Response("404", "Guild not found."))
+                    } else {
+                        call.respond(
+                            HttpStatusCode.OK,
+                            ResponseData("200", ticket, "Ticket ${ticket.id} found.")
+                        )
+                    }
+                }
+
+                delete("/{channelId}") {
+                    val channelId = call.parameters["channelId"] ?: throw IllegalArgumentException("Invalid id")
+                    val ticket = ticketManager.read(channelId)
+
+                    if (ticket == null) {
+                        call.respond(HttpStatusCode.NotFound, Response("404", "Ticket not found.`"))
+                    } else {
+                        ticketManager.delete(channelId)
+                        call.respond(HttpStatusCode.OK, Response("200", "Ticket ${ticket.id} deleted."))
+                    }
                 }
 
                 patch("/{channelId}") {
                     val channelId = call.parameters["channelId"] ?: throw IllegalArgumentException("Invalid id")
-                    val ticket = call.receive<TicketUpdateRequest>()
-                    ticketManager.update(channelId, ticket)
-                    call.respond(HttpStatusCode.OK)
+                    val data = call.receive<TicketUpdateRequest>()
+                    val ticket = ticketManager.read(channelId)
+
+                    if (ticket == null) {
+                        call.respond(HttpStatusCode.NotFound, Response("404", "Ticket not found.`"))
+                    } else {
+                        ticketManager.update(channelId, data)
+                        call.respond(HttpStatusCode.OK, Response("200", "Ticket ${ticket.id} updated."))
+                    }
                 }
             }
         }
