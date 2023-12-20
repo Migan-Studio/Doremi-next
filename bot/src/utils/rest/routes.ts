@@ -4,7 +4,7 @@ import type { Snowflake } from 'discord.js'
 class Guild {
   public get(id: Snowflake): RoutesInfo {
     return {
-      url: `/v1/guilds/${id}`,
+      url: `/v2/guilds/${id}`,
     }
   }
 
@@ -13,14 +13,14 @@ class Guild {
     owner_id: Snowflake
   }): RoutesInfo {
     return {
-      url: '/v1/guilds/create',
+      url: '/v2/guilds/create',
       body,
     }
   }
 
   public delete(id: Snowflake): RoutesInfo {
     return {
-      url: `/v1/guilds/${id}`,
+      url: `/v2/guilds/${id}`,
     }
   }
 }
@@ -28,7 +28,7 @@ class Guild {
 class Warn {
   public get(guildId: Snowflake, userId: Snowflake): RoutesInfo {
     return {
-      url: `/v1/warns/${guildId}/${userId}`,
+      url: `/v2/warns/${guildId}/${userId}`,
     }
   }
 
@@ -38,14 +38,14 @@ class Warn {
     reason: string
   }): RoutesInfo {
     return {
-      url: '/v1/warns/create',
+      url: '/v2/warns/create',
       body,
     }
   }
 
   public delete(id: string): RoutesInfo {
     return {
-      url: `/v1/warns/${id}`,
+      url: `/v2/warns/${id}`,
     }
   }
 }
@@ -53,7 +53,7 @@ class Warn {
 class Ticket {
   public get(id: Snowflake): RoutesInfo {
     return {
-      url: `/v1/tickets/${id}`,
+      url: `/v2/tickets/${id}`,
     }
   }
 
@@ -63,14 +63,14 @@ class Ticket {
     channel_id: Snowflake
   }): RoutesInfo {
     return {
-      url: '/v1/tickets/create',
+      url: '/v2/tickets/create',
       body,
     }
   }
 
   public update(channelId: Snowflake, closed: boolean): RoutesInfo {
     return {
-      url: `/v1/warns/${channelId}`,
+      url: `/v2/warns/${channelId}`,
       body: {
         closed,
       },
@@ -79,7 +79,7 @@ class Ticket {
 
   public delete(id: string): RoutesInfo {
     return {
-      url: `/v1/tickets/${id}`,
+      url: `/v2/tickets/${id}`,
     }
   }
 }

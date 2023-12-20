@@ -4,6 +4,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { Logger } from '@migan-studio/logger'
 import config from '../config.json'
+import { DoremiDatabase } from '@utils'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -18,6 +19,7 @@ export default class DoremiClient extends DiscommandClient {
   }
   public readonly OWNER_ID = config.bot.owner_id
   public readonly config = config
+  public readonly database = new DoremiDatabase()
   public constructor() {
     super(
       {
@@ -58,5 +60,6 @@ declare module 'discord.js' {
     }
     readonly OWNER_ID: Snowflake
     readonly config: DoremiConfig
+    readonly database: DoremiDatabase
   }
 }

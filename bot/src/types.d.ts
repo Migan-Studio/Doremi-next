@@ -48,3 +48,12 @@ export interface TicketRequest {
 export interface TicketUpdateRequest {
   closed: boolean
 }
+
+export interface Response {
+  code: string
+  message: string
+}
+
+export interface ResponseData<T> extends Response {
+  data: T
+}
