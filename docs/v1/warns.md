@@ -1,23 +1,5 @@
 # Warn
 
-## Create warn
-
-### `POST` /warn/create
-
-- Body
-
-| Field    | Type                                                                  | Description |
-|----------|-----------------------------------------------------------------------|-------------|
-| guild_id | [Snowflake](https://discord.com/developers/docs/reference#snowflakes) | Guild's id  |
-| user_id  | [Snowflake](https://discord.com/developers/docs/reference#snowflakes) | User's id   |
-| reason   | String                                                                | Warn reason |
-
-- Header
-
-| Field        | Value            |
-|--------------|------------------|
-| Content-Type | application/json |
-
 ## Get warn
 
 ### `GET` /warns/{guildId}/{userId}
@@ -33,7 +15,3 @@
   "created_at": "2023-12-16T11:46:07.213677"
 }
 ```
-
-## Delete warn
-
-### `DELETE` /warns/{warnId}
