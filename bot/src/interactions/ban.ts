@@ -1,5 +1,5 @@
 import { type ButtonInteraction } from 'discord.js'
-import type { KickOrBanOptions } from '../types.js'
+import type { KickOrBanOptions } from '@types'
 import { localization } from '@localization'
 
 export async function banMember(
