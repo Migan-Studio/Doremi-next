@@ -1,0 +1,3 @@
+# Doremi
+
+- PerioDis' discord bot.
