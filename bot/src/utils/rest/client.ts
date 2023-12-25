@@ -5,7 +5,7 @@ import { DoremiError } from '@error'
 
 export class RestClient {
   private _api = axios.create({
-    baseURL: backend_url,
+    baseURL: backend_url || 'https://localhost:8080',
     headers: { 'Content-Type': 'application/json' },
   })
 
