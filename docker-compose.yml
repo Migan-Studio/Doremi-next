@@ -2,20 +2,31 @@ version: "3.9"
 
 
 services:
-  doremi:
+  bot:
     container_name: doremi
     build:
-      context: .
+      context: ./bot
       dockerfile: ./Dockerfile
     networks:
       - doremi_network
+    depends_on:
+      - server
+  server:
+    container_name: doremi_server
+    build:
+      context: ./server
+      dockerfile: ./Dockerfile
+    networks:
+      - doremi_network
+    ports:
+      - "8080:8080"
     depends_on:
       - database
   database:
     container_name: doremi_database
     image: mariadb:10.9.4
     volumes:
-      - "./database/:/var/lib/mysql"
+      - "./data/:/var/lib/mysql"
       - "/etc/localtime:/etc/localtime"
       - "./sql/:/docker-entrypoint-initdb.d/"
     env_file:
@@ -26,5 +37,4 @@ services:
       - doremi_network
 
 networks:
-  doremi_network:
-    driver: bridge
+  doremi_network: {}
