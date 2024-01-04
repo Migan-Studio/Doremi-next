@@ -117,6 +117,22 @@
       "time_error": "`시간`값은 아래와 같은 형식이여야 해요.\n```\n3 분\n6 시간\n4일\n```"
     }
   },
+  "guild_create": {
+    "embeds": {
+      "title": "Doremi",
+      "description": {
+        "0": "Doremi 서비스에 등록을 할려면 개인정보처리방침에 동의해야해요. 만약 동의하지 않을 시, 일부 기능을 못써요.",
+        "1": "\n만약 거부 후에 동의를 원하면, 봇을 추방했다 다시 초대해 주세요.",
+        "accept": "개인정보처리방침에 동의를 하였어요.",
+        "refuse": "개인정보처리방침에 동의를 안했어요.",
+        "error": "오류로 인해 서비스에 등록을 못했어요."
+      }
+    },
+    "components": {
+      "accept": "동의",
+      "refuse": "거부"
+    }
+  },
   "max_value": "`시간`값은 {time}{smh}보다 적어야해요.",
   "if_dont_have_permission": "❌ 이 봇에 {permission}권한이 없어요 :("
 }

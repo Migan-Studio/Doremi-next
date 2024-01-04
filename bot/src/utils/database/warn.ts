@@ -1,6 +1,11 @@
 import { Base } from './base.js'
 import { RestClient, Routes } from '@utils'
-import type { Response, ResponseData, WarnData, WarnRequest } from '@types'
+import type {
+  Response,
+  ResponseData,
+  WarnData,
+  WarnRequest,
+} from '../../types.js'
 import { Snowflake } from 'discord.js'
 
 export class Warn extends Base {
