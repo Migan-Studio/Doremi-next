@@ -53,6 +53,7 @@ export async function privacyPolicy(
             timestamp: new Date().toISOString(),
           },
         ],
+        components: [],
       })
       break
   }
