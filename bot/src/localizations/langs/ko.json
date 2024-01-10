@@ -133,6 +133,29 @@
       "refuse": "거부"
     }
   },
+  "support": {
+    "embeds": {
+      "direct_message": {
+        "title": "Doremi 지원",
+        "description": "Doremi에 관해 궁금한 점이 생겼거나, Doremi에 오류가 생겼다면 문의를 넣어주세요."
+      },
+      "end": {
+        "title": "Doremi 지원",
+        "description": "해당 지원은 이제 닫혔어요."
+      }
+    },
+    "components": {
+      "select_menus": {
+        "bug_report": "버그가 생겼어요!",
+        "discussion": "이러이러한게 궁금해요!",
+        "cancel": "취소",
+        "placeholder": "여기에서 선택해주세요."
+      },
+      "button": {
+        "end": "지원 종료하기"
+      }
+    }
+  },
   "max_value": "`시간`값은 {time}{smh}보다 적어야해요.",
   "if_dont_have_permission": "❌ 이 봇에 {permission}권한이 없어요 :("
 }
