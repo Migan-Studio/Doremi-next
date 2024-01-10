@@ -1266,10 +1266,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discommand@npm:^13.2.2":
-  version: 13.2.2
-  resolution: "discommand@npm:13.2.2"
-  checksum: 41ac495ea92c9293a6a3ddae29621899bf94df1ea5182776c909e4e4a3c4f9121e4dbfce849e3d90978e35181d7bcb333d09a058db402624c563c9ab5f117035
+"discommand@npm:^13.2.3":
+  version: 13.2.3
+  resolution: "discommand@npm:13.2.3"
+  checksum: e976de2a53790093c5ea46468209327576fc49537992a5de170a9a820328e3fee8ea550a09a9d8af3f26e58f9c7de3b8f1b5ceff43b92987939c04d8470302a6
   languageName: node
   linkType: hard
 
@@ -1325,7 +1325,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:^6.10.0"
     axios: "npm:^1.6.2"
     chalk: "npm:^5.3.0"
-    discommand: "npm:^13.2.2"
+    discommand: "npm:^13.2.3"
     discord.js: "npm:^14.14.1"
     eslint: "npm:^8.53.0"
     eslint-config-prettier: "npm:^9.0.0"

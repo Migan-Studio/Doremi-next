@@ -36,7 +36,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/parser", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:6.10.0"],\
           ["axios", "npm:1.6.2"],\
           ["chalk", "npm:5.3.0"],\
-          ["discommand", "npm:13.2.2"],\
+          ["discommand", "npm:13.2.3"],\
           ["discord.js", "npm:14.14.1"],\
           ["eslint", "npm:8.53.0"],\
           ["eslint-config-prettier", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:9.0.0"],\
@@ -1670,10 +1670,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["discommand", [\
-      ["npm:13.2.2", {\
-        "packageLocation": "./.yarn/cache/discommand-npm-13.2.2-1356327555-41ac495ea9.zip/node_modules/discommand/",\
+      ["npm:13.2.3", {\
+        "packageLocation": "./.yarn/cache/discommand-npm-13.2.3-56a7b3b050-e976de2a53.zip/node_modules/discommand/",\
         "packageDependencies": [\
-          ["discommand", "npm:13.2.2"]\
+          ["discommand", "npm:13.2.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1735,7 +1735,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/parser", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:6.10.0"],\
           ["axios", "npm:1.6.2"],\
           ["chalk", "npm:5.3.0"],\
-          ["discommand", "npm:13.2.2"],\
+          ["discommand", "npm:13.2.3"],\
           ["discord.js", "npm:14.14.1"],\
           ["eslint", "npm:8.53.0"],\
           ["eslint-config-prettier", "virtual:726fcfe1e9bc0aada54d92a97a812e09b5b7d1db7ba112d784d36b1ac0797bae09857fce771431d8ba4a5ca03bf99bf37a56b79fac74bfa91dd247a547c74d95#npm:9.0.0"],\
