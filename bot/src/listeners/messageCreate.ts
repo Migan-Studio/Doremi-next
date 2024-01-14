@@ -1,17 +1,18 @@
 import { Listener } from 'discommand'
 import { ComponentType, Events, Message } from 'discord.js'
 import { korean } from '@localization'
+import { selectSupport } from '@interaction'
 
 export default class MessageCreate extends Listener {
   public constructor() {
     super(Events.MessageCreate)
   }
 
-  public execute(msg: Message) {
+  public async execute(msg: Message) {
     if (msg.channel.isDMBased()) {
-      const supportContent = msg.content
+      const content = msg.content
 
-      msg.channel.send({
+      const response = await msg.channel.send({
         embeds: [
           {
             title: korean.support.embeds.direct_message.title,
@@ -50,6 +51,11 @@ export default class MessageCreate extends Listener {
           },
         ],
       })
+
+      const confirmation =
+        await response.awaitMessageComponent<ComponentType.StringSelect>({})
+
+      await selectSupport(confirmation, content)
     }
   }
 }

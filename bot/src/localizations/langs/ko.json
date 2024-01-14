@@ -142,6 +142,10 @@
       "end": {
         "title": "Doremi 지원",
         "description": "해당 지원은 이제 닫혔어요."
+      },
+      "cancel": {
+        "title": "Doremi 지원",
+        "description": "지원을 취소했어요."
       }
     },
     "components": {
